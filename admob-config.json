@@ -1,0 +1,44 @@
+{
+  "_note": "Placeholders use Google's public TEST IDs. Replace each with your real AdMob IDs (https://apps.admob.com) before release.",
+  "publisherId": "pub-0000000000000000",
+  "games": {
+    "numero-rush": {
+      "name": "Numero Rush",
+      "android": {
+        "appId": "ca-app-pub-3940256099942544~3347511713",
+        "adUnits": {
+          "banner": "ca-app-pub-3940256099942544/6300978111",
+          "interstitial": "ca-app-pub-3940256099942544/1033173712",
+          "rewarded": "ca-app-pub-3940256099942544/5224354917"
+        }
+      },
+      "ios": {
+        "appId": "ca-app-pub-3940256099942544~1458002511",
+        "adUnits": {
+          "banner": "ca-app-pub-3940256099942544/2934735716",
+          "interstitial": "ca-app-pub-3940256099942544/4411468910",
+          "rewarded": "ca-app-pub-3940256099942544/1712485313"
+        }
+      }
+    },
+    "alchemy-arrays": {
+      "name": "Alchemy Arrays",
+      "android": {
+        "appId": "ca-app-pub-3940256099942544~3347511713",
+        "adUnits": {
+          "banner": "ca-app-pub-3940256099942544/6300978111",
+          "interstitial": "ca-app-pub-3940256099942544/1033173712",
+          "rewarded": "ca-app-pub-3940256099942544/5224354917"
+        }
+      },
+      "ios": {
+        "appId": "ca-app-pub-3940256099942544~1458002511",
+        "adUnits": {
+          "banner": "ca-app-pub-3940256099942544/2934735716",
+          "interstitial": "ca-app-pub-3940256099942544/4411468910",
+          "rewarded": "ca-app-pub-3940256099942544/1712485313"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JJR Pixel Plays</title>
+<meta name="description" content="Numero Rush and Alchemy Arrays – games by JJR Pixel Plays.">
+<style>
+  :root { --bg:#0f1220; --card:#1a1f36; --text:#eef0ff; --muted:#9aa3c7; --accent:#7c5cff; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f4f5fb; --card:#fff; --text:#161a2e; --muted:#5a6285; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); }
+  header, main, footer { max-width:880px; margin:0 auto; padding:24px 16px; }
+  h1 { margin:0 0 4px; }
+  p.sub { color:var(--muted); margin:0; }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+  .card { background:var(--card); border-radius:14px; padding:20px; }
+  .card h2 { margin-top:0; }
+  .card a { display:inline-block; margin-top:8px; padding:8px 16px; border-radius:8px;
+            background:var(--accent); color:#fff; text-decoration:none; }
+  .ad-slot { min-height:50px; margin:24px 0; text-align:center; color:var(--muted); font-size:12px; }
+  footer { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>JJR Pixel Plays</h1>
+  <p class="sub">Games by jjrpixelplays</p>
+</header>
+<main>
+  <div class="grid">
+    <section class="card" id="numero-rush">
+      <h2>Numero Rush</h2>
+      <p>A fast-paced number puzzle. Race the clock and chain your numbers.</p>
+      <a href="#" aria-disabled="true">Coming soon</a>
+    </section>
+    <section class="card" id="alchemy-arrays">
+      <h2>Alchemy Arrays</h2>
+      <p>Combine elements in clever arrays to unlock new reactions.</p>
+      <a href="#" aria-disabled="true">Coming soon</a>
+    </section>
+  </div>
+
+  <!-- Web ad slot: requires an AdSense/Ad Manager account. AdMob itself serves the mobile apps
+       (see admob-config.json and app-ads.txt). Uncomment and set your IDs once approved.
+  <div class="ad-slot">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0000000000000000"
+         data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  -->
+</main>
+<footer>&copy; <span id="y"></span> JJR Pixel Plays</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
