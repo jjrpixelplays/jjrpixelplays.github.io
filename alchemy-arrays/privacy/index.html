@@ -1,13 +1,189 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alchemy Arrays Privacy Policy</title>
-<meta http-equiv="refresh" content="0; url=https://sites.google.com/view/numero-rush-policy/alchemy-privacy">
-<link rel="canonical" href="https://sites.google.com/view/numero-rush-policy/alchemy-privacy">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy – Alchemy Arrays</title>
+<meta name="description" content="Privacy Policy for Alchemy Arrays, a color-path puzzle game for Android and iOS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #FBFAF2;
+    --surface: #FFFFFF;
+    --text: #2E3A2F;
+    --muted: #5F6B60;
+    --rule: #E3E6D8;
+    --green: #8CCB9B;
+    --orange: #F4B183;
+    --yellow: #F2DF7E;
+    --violet: #B9A7E3;
+    --link: #2F7A4A;
+    --note-bg: #EEF7EF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --bg: #1B211C;
+      --surface: #232A24;
+      --text: #E8EDE6;
+      --muted: #A9B4AA;
+      --rule: #344036;
+      --link: #9FDDB0;
+      --note-bg: #26352A;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Nunito", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  header { padding: 3rem 0 2rem; }
+  .brand { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; }
+  .brand svg { width: 64px; height: 64px; flex-shrink: 0; }
+  .brand-name { font-weight: 800; font-size: 1.25rem; }
+  h1 { font-size: clamp(2rem, 6vw, 2.75rem); line-height: 1.15; margin: 0 0 0.75rem; font-weight: 800; }
+  .dates { color: var(--muted); margin: 0; }
+
+  .summary {
+    background: var(--note-bg);
+    border-left: 6px solid var(--green);
+    border-radius: 0 12px 12px 0;
+    padding: 1.1rem 1.25rem;
+    margin: 0 0 2.5rem;
+  }
+  .summary p { margin: 0; }
+
+  section { padding: 1.5rem 0; border-top: 1px solid var(--rule); }
+  h2 { font-size: 1.35rem; margin: 0 0 0.6rem; font-weight: 800; }
+  h3 { font-size: 1.05rem; margin: 1.25rem 0 0.4rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; border-radius: 3px; }
+
+  .table-scroll { overflow-x: auto; margin-bottom: 1rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 30rem; background: var(--surface); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 0.65rem 0.85rem; border-bottom: 1px solid var(--rule); vertical-align: top; font-size: 0.97rem; }
+  th { font-weight: 800; }
+  tr:last-child td { border-bottom: none; }
+
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--rule); }
+</style>
 </head>
 <body>
-<p>Redirecting to the <a href="https://sites.google.com/view/numero-rush-policy/alchemy-privacy">Alchemy Arrays Privacy Policy</a>…</p>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <!-- Mini color-path grid motif -->
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="1" y="1" width="62" height="62" rx="12" fill="var(--surface)" stroke="var(--rule)" stroke-width="2"/>
+        <path d="M14 14 H38 V26" stroke="var(--green)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M14 50 V38 H50" stroke="var(--orange)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M50 14 V26" stroke="var(--yellow)" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <circle cx="14" cy="14" r="5.5" fill="var(--green)"/><circle cx="38" cy="26" r="5.5" fill="var(--green)"/>
+        <circle cx="14" cy="50" r="5.5" fill="var(--orange)"/><circle cx="50" cy="38" r="5.5" fill="var(--orange)"/>
+        <circle cx="50" cy="14" r="5.5" fill="var(--yellow)"/><circle cx="50" cy="26" r="5.5" fill="var(--yellow)"/>
+      </svg>
+      <span class="brand-name">Alchemy Arrays</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="dates">Effective date: October 15, 2026<br>Last updated: October 15, 2026</p>
+  </header>
+
+  <div class="summary">
+    <p><strong>In short:</strong> Alchemy Arrays does not ask for, collect, or share your personal information. There are no accounts and no sign-in. The only things the game saves are your settings, such as your chosen color theme, and they stay on your device.</p>
+  </div>
+
+  <section>
+    <h2>About this policy</h2>
+    <p>This Privacy Policy explains how Alchemy Arrays (“the App”, “the game”), developed and published by [Developer Name] (“we”, “us”, “our”), handles information when you use the App on Android, iOS, and tablet devices.</p>
+    <p>By downloading or using the App, you agree to the practices described here. If you do not agree, please do not use the App.</p>
+  </section>
+
+  <section>
+    <h2>Information we collect</h2>
+    <p>We do not collect any personally identifiable information. The App does not ask for your name, email address, phone number, location, contacts, photos, or any other personal details, and it does not require you to create an account.</p>
+
+    <h3>Information stored only on your device</h3>
+    <p>To remember your preferences between sessions, the App saves a small amount of data locally on your device using the operating system’s standard app storage:</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Why it is saved</th><th>Where it is kept</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Selected color theme (Light Green, Light Orange, or Light Pale Yellow)</td><td>So the game opens in the theme you picked</td><td>Your device only</td></tr>
+          <tr><td>Game settings and preferences</td><td>So your choices are kept the next time you play</td><td>Your device only</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This data is never sent to us or to anyone else. We cannot see it, and it is not linked to your identity.</p>
+  </section>
+
+  <section>
+    <h2>Device permissions</h2>
+    <p>The App does not request access to your camera, microphone, location, contacts, storage, or other sensitive device features. It works fully offline.</p>
+  </section>
+
+  <section>
+    <h2>Third-party services</h2>
+    <p>The App is distributed through the Google Play Store and the Apple App Store. When you download or update the App, those platforms may collect information according to their own privacy policies, such as download statistics and anonymous crash reports that you have allowed in your device settings. We do not control this collection.</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+    </ul>
+    <p>The App itself does not include advertising, analytics, or tracking tools, and it does not sell or share data with third parties.</p>
+  </section>
+
+  <section>
+    <h2>Children’s privacy</h2>
+    <p>Alchemy Arrays is a puzzle game suitable for players of all ages. Because the App does not collect personal information from anyone, it does not knowingly collect personal information from children under 13 (or the equivalent minimum age in your country). If you are a parent or guardian and believe your child has somehow provided us with personal information, please contact us and we will delete it promptly.</p>
+  </section>
+
+  <section>
+    <h2>Data security</h2>
+    <p>Your preferences are kept in the App’s private storage on your device, which other apps cannot normally access. Since we do not transmit or store your data on any server, there is no data on our side that could be exposed.</p>
+  </section>
+
+  <section>
+    <h2>Deleting your data</h2>
+    <p>You are always in control of the data the App saves. To remove it, you can either clear the App’s data from your device settings or uninstall the App. Both actions permanently delete your saved theme and settings.</p>
+  </section>
+
+  <section>
+    <h2>Your rights</h2>
+    <p>Depending on where you live, privacy laws such as the GDPR (European Union), the CCPA (California), or India’s Digital Personal Data Protection Act, 2023, may give you rights to access, correct, or delete your personal data. Because we do not collect or hold personal data about you, there is nothing for us to provide or remove, but you are welcome to contact us with any questions.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time, for example if new features are added to the game. When we do, we will change the “Last updated” date at the top of this page. If a change affects how your information is handled, we will describe it clearly here before it takes effect. We encourage you to review this page periodically.</p>
+  </section>
+
+  <section>
+    <h2>Contact us</h2>
+    <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+    <p><strong>[Developer Name]</strong><br>
+    Email: <a href="mailto:[your-email@example.com]">[your-email@example.com]</a></p>
+  </section>
+
+  <footer>
+    © 2026 [Developer Name]. All rights reserved.
+  </footer>
+
+</div>
 </body>
 </html>
