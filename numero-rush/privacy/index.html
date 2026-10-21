@@ -10,206 +10,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --hero: #1e1a4d;
-    --hero-deep: #15123a;
-    --cell: #2a2565;
-    --cell-edge: #3b3586;
-    --orange: #ff801e;
-    --boost: #2ad6a0;
-    --page: #f6f5fc;
-    --surface: #ffffff;
-    --text: #26243d;
-    --muted: #5f5c7d;
-    --rule: #e2e0f0;
-    --heading: #1e1a4d;
-    --link: #c25a08;
-    color-scheme: light;
-    box-sizing: border-box;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --page: #121029;
-      --surface: #1a1740;
-      --text: #dcdaf2;
-      --muted: #a3a0c8;
-      --rule: #2e2a63;
-      --heading: #ffffff;
-      --link: #ffa45c;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --page: #121029; --surface: #1a1740; --text: #dcdaf2; --muted: #a3a0c8;
-    --rule: #2e2a63; --heading: #ffffff; --link: #ffa45c; color-scheme: dark;
-  }
-  *, *::before, *::after { box-sizing: inherit; }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
-  body {
-    margin: 0;
-    background: var(--page);
-    color: var(--text);
-    font-family: "Lexend", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* Header */
-  header {
-    background: radial-gradient(120% 140% at 85% 0%, #3a2a6e 0%, var(--hero) 45%, var(--hero-deep) 100%);
-    color: #fff;
-    overflow: hidden;
-  }
-  .header-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 3.5rem 1.5rem 0;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
-    align-items: end;
-  }
-  .brand { padding-bottom: 3rem; }
-  .brand h1 {
-    margin: 0;
-    font-size: clamp(2.4rem, 7vw, 3.75rem);
-    line-height: 1;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-  .brand h1 .rush { color: var(--orange); display: block; }
-  .brand p {
-    margin: 1.1rem 0 0;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #c8c4f2;
-  }
-  .brand .date { font-size: 0.9rem; color: #9b97cf; margin-top: 0.35rem; font-weight: 400; }
-
-  .app-icon { width: 128px; height: 128px; border-radius: 28px; }
-  @media (max-width: 600px) { .app-icon { width: 88px; height: 88px; border-radius: 20px; } }
-
-  /* Lane motif, echoing the game board */
-  .lane {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 8px;
-    padding: 0 10px;
-    border: 3px solid var(--orange);
-    border-bottom: 0;
-    border-radius: 18px 18px 0 0;
-    padding-top: 10px;
-    width: 128px;
-  }
-  .lane span {
-    display: grid;
-    place-items: center;
-    height: 46px;
-    border-radius: 11px;
-    background: var(--cell);
-    border: 2px solid var(--cell-edge);
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #e9e7ff;
-    line-height: 1.1;
-  }
-  .lane .boost {
-    background: #133a3c;
-    border-color: var(--boost);
-  }
-  .lane .boost small { display: block; font-size: 0.72rem; color: var(--boost); }
-  .lane .you { position: relative; }
-  .lane .you::after {
-    content: "";
-    position: absolute;
-    right: 8px;
-    width: 18px; height: 18px;
-    border-radius: 50%;
-    background: #f7cf1d;
-    box-shadow: 0 0 0 3px #fff;
-  }
-
-  /* Body */
-  main {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1.5rem 4rem;
-  }
-  .summary {
-    max-width: 44rem;
-    margin: -1px 0 0;
-    background: var(--surface);
-    border-left: 4px solid var(--orange);
-    padding: 1.4rem 1.6rem;
-    border-radius: 0 0 14px 0;
-    box-shadow: 0 12px 30px -18px rgba(30, 26, 77, 0.35);
-  }
-  .summary p { margin: 0; }
-  .summary p + p { margin-top: 0.75rem; }
-  .summary strong { color: var(--heading); }
-
-  article { max-width: 44rem; margin-top: 2.5rem; }
-  section { padding: 1.6rem 0; border-top: 1px solid var(--rule); }
-  section:first-child { border-top: 0; padding-top: 0.5rem; }
-  h2 {
-    margin: 0 0 0.6rem;
-    font-size: 1.3rem;
-    line-height: 1.3;
-    font-weight: 700;
-    color: var(--heading);
-    display: flex;
-    gap: 0.75rem;
-    align-items: baseline;
-  }
-  h2 .n { color: var(--orange); font-weight: 800; min-width: 1.5rem; }
-  p { margin: 0 0 0.8rem; }
-  ul { margin: 0 0 0.8rem; padding-left: 1.25rem; }
-  li { margin-bottom: 0.35rem; }
-  li::marker { color: var(--orange); }
-  a { color: var(--link); text-underline-offset: 3px; overflow-wrap: anywhere; }
-  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; border-radius: 3px; }
-
-  .contact {
-    margin-top: 0.6rem;
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 0.5rem 1.5rem;
-    background: var(--surface);
-    padding: 1.1rem 1.4rem;
-    border-radius: 12px;
-    border: 1px solid var(--rule);
-  }
-  .contact dt { font-weight: 700; color: var(--heading); }
-  .contact dd { margin: 0; }
-
-  footer {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    border-top: 1px solid var(--rule);
-    font-size: 0.875rem;
-    color: var(--muted);
-  }
-
-  @media (max-width: 600px) {
-    .header-inner { grid-template-columns: 1fr; padding-top: 2.5rem; }
-    .lane { display: none; }
-    .brand { padding-bottom: 2.25rem; }
-    .summary { border-radius: 0 0 12px 12px; }
-  }
+  :root { --hero:#1e1a4d;--hero-deep:#15123a;--hero-glow:#3a2a6e;--accent:#ff801e;--page:#f6f5fc;--surface:#fff;--text:#26243d;--muted:#5f5c7d;--rule:#e2e0f0;--heading:#1e1a4d;--link:#c25a08; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root { --page:#121029;--surface:#1a1740;--text:#dcdaf2;--muted:#a3a0c8;--rule:#2e2a63;--heading:#fff;--link:#ffa45c; color-scheme: dark; } }
 </style>
+<link rel="stylesheet" href="../../assets/policy.css">
 </head>
 <body>
 
 <header>
   <div class="header-inner">
     <div class="brand">
-      <h1>Numero <span class="rush">Rush</span></h1>
+      <h1>Numero <span class="accent">Rush</span></h1>
       <p>Privacy Policy</p>
       <p class="date">Effective date: October 15, 2026</p>
+      <p class="date">Last updated: October 15, 2026</p>
     </div>
     <img class="app-icon" src="../icon.png" alt="Numero Rush icon" width="128" height="128">
   </div>
@@ -226,7 +40,6 @@
       <h2><span class="n">1</span>Information we collect</h2>
       <p>We do not collect any personal information. We do not require you to create an account, sign in, or provide your email address, phone number, location, contacts, photos, or any other personal data.</p>
     </section>
-
     <section>
       <h2><span class="n">2</span>Information stored on your device</h2>
       <p>To make the Game work, some information is saved locally on your device only. This information is never sent to us or to any third party:</p>
@@ -237,17 +50,14 @@
       </ul>
       <p>Because this data stays on your device, we cannot see it, access it, or recover it.</p>
     </section>
-
     <section>
       <h2><span class="n">3</span>Internet access and permissions</h2>
       <p>Numero Rush is designed to be played offline. The Game does not request access to your location, camera, microphone, contacts, or files, and it does not track your activity across other apps or websites.</p>
     </section>
-
     <section>
       <h2><span class="n">4</span>Advertising and analytics</h2>
       <p>The Game does not display advertisements and does not use any third-party analytics, advertising, or tracking tools.</p>
     </section>
-
     <section>
       <h2><span class="n">5</span>Third-party services</h2>
       <p>The Game is distributed through the Google Play Store and the Apple App Store. When you download or update the Game, these platforms may collect information (such as device type and crash reports) under their own privacy policies, which we do not control:</p>
@@ -256,32 +66,26 @@
         <li>Apple Privacy Policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
       </ul>
     </section>
-
     <section>
       <h2><span class="n">6</span>Children’s privacy</h2>
       <p>Numero Rush is suitable for players of all ages. Because we do not collect any personal information from anyone, including children under 13, no personal information from children is ever collected or shared. Parents can supervise player names entered in the Game, which are stored on the device only.</p>
     </section>
-
     <section>
       <h2><span class="n">7</span>Data retention and deletion</h2>
       <p>All Game data remains on your device until you remove it. You can delete it at any time by clearing the app’s data in your device settings or by uninstalling the Game.</p>
     </section>
-
     <section>
       <h2><span class="n">8</span>Security</h2>
       <p>Since your Game data never leaves your device, it is protected by your device’s own security features. We encourage you to keep your device and operating system up to date.</p>
     </section>
-
     <section>
       <h2><span class="n">9</span>Your rights</h2>
       <p>Depending on where you live (for example, under the GDPR in the EU or the DPDP Act in India), you may have rights to access, correct, or delete personal data. Since we do not collect or hold any personal data, there is nothing for us to access or delete; you are in full control of the data on your device.</p>
     </section>
-
     <section>
       <h2><span class="n">10</span>Changes to this policy</h2>
       <p>We may update this Privacy Policy from time to time, for example if new features are added. Any changes will be posted on this page with a new effective date. Continued use of the Game after changes means you accept the updated policy.</p>
     </section>
-
     <section>
       <h2><span class="n">11</span>Contact us</h2>
       <p>If you have any questions about this Privacy Policy, please contact us:</p>
