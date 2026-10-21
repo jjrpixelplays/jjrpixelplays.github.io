@@ -13,15 +13,9 @@
   :root { --hero:#2e5a3c;--hero-deep:#1f3d29;--hero-glow:#4a8a5e;--accent:#8ccb9b;--page:#fbfaf2;--surface:#fff;--text:#2e3a2f;--muted:#5f6b60;--rule:#e3e6d8;--heading:#2e3a2f;--link:#2f7a4a; color-scheme: light; }
   @media (prefers-color-scheme: dark) { :root { --page:#1b211c;--surface:#232a24;--text:#e8ede6;--muted:#a9b4aa;--rule:#344036;--heading:#fff;--link:#9fddb0; color-scheme: dark; } }
   /* fab */
-  .home-fab { position: fixed; right: max(1rem, env(safe-area-inset-right, 0px)); bottom: max(1rem, env(safe-area-inset-bottom, 0px)); z-index: 50; width: 56px; height: 56px; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,.3); transition: transform .15s ease; }
-  .home-fab img { display: block; width: 100%; height: 100%; border-radius: 16px; }
+  .home-fab { position: fixed; right: max(1rem, env(safe-area-inset-right, 0px)); bottom: max(1rem, env(safe-area-inset-bottom, 0px)); z-index: 50; width: 64px; height: 64px; border-radius: 20%; box-shadow: 0 6px 18px rgba(0,0,0,.3); transition: transform .15s ease; }
+  .home-fab img { display: block; width: 100%; height: 100%; border-radius: 20%; }
   .home-fab:hover, .home-fab:focus-visible { transform: scale(1.08); }
-  .home-fab::before { content: ""; position: absolute; inset: 0; border-radius: 16px; border: 2px solid var(--accent, #1f6f55); opacity: 0; animation: fab-ring 3.2s ease-out infinite; pointer-events: none; }
-  .home-fab img { animation: fab-bob 3.2s ease-in-out infinite; }
-  @keyframes fab-bob { 0%, 55%, 100% { transform: translateY(0) rotate(0); } 62% { transform: translateY(-7px) rotate(-6deg); } 70% { transform: translateY(0) rotate(5deg); } 78% { transform: translateY(-3px) rotate(-3deg); } 86% { transform: translateY(0) rotate(0); } }
-  @keyframes fab-ring { 0%, 55% { opacity: 0; transform: scale(1); } 62% { opacity: .55; } 100% { opacity: 0; transform: scale(1.7); } }
-  .home-fab:hover img, .home-fab:focus-visible img { animation-play-state: paused; }
-  @media (prefers-reduced-motion: reduce) { .home-fab::before, .home-fab img { animation: none; } }
 </style>
 <link rel="stylesheet" href="../../assets/policy.css?v=3">
 </head>
@@ -103,7 +97,7 @@
 <footer>© 2026 Janak Rana · Alchemy Arrays · <a href="../privacy/">Privacy Policy</a> · <a href="./">Terms of Use</a></footer>
 
 <a class="home-fab" href="../../" aria-label="Go to jjrpixelplays home page" title="jjrpixelplays home">
-  <img src="../../assets/icon.png" alt="" width="56" height="56">
+  <img src="../../assets/home-icon.svg" alt="" width="64" height="64">
 </a>
 
 </body>
