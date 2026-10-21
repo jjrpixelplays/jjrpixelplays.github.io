@@ -16,10 +16,13 @@ header {
   background: radial-gradient(120% 140% at 85% 0%, var(--hero-glow) 0%, var(--hero) 45%, var(--hero-deep) 100%);
   color: #fff;
 }
+.topnav { max-width: 960px; margin: 0 auto; padding: 1rem 1.5rem 0; }
+.topnav a { color: #fff; font-weight: 500; font-size: 0.95rem; text-decoration: none; padding: 0.4rem 0.9rem; border-radius: 999px; background: rgba(255,255,255,.14); display: inline-block; }
+.topnav a:hover, .topnav a:focus-visible { background: rgba(255,255,255,.28); outline-color: #fff; }
 .header-inner {
   max-width: 960px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 3rem;
+  padding: 1.5rem 1.5rem 3rem;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 2rem;
@@ -103,7 +106,8 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .header-inner { padding: 2rem 1.25rem; gap: 1rem; }
+  .topnav { padding: 0.75rem 1.25rem 0; }
+  .header-inner { padding: 1.25rem 1.25rem 2rem; gap: 1rem; }
   .app-icon { width: 88px; height: 88px; border-radius: 20px; }
   .summary { border-radius: 0 0 12px 12px; }
 }
