@@ -12,8 +12,12 @@
 <style>
   :root { --hero:#2e5a3c;--hero-deep:#1f3d29;--hero-glow:#4a8a5e;--accent:#8ccb9b;--page:#fbfaf2;--surface:#fff;--text:#2e3a2f;--muted:#5f6b60;--rule:#e3e6d8;--heading:#2e3a2f;--link:#2f7a4a; color-scheme: light; }
   @media (prefers-color-scheme: dark) { :root { --page:#1b211c;--surface:#232a24;--text:#e8ede6;--muted:#a9b4aa;--rule:#344036;--heading:#fff;--link:#9fddb0; color-scheme: dark; } }
+  /* fab */
+  .home-fab { position: fixed; right: max(1rem, env(safe-area-inset-right, 0px)); bottom: max(1rem, env(safe-area-inset-bottom, 0px)); z-index: 50; width: 56px; height: 56px; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,.3); transition: transform .15s ease; }
+  .home-fab img { display: block; width: 100%; height: 100%; border-radius: 16px; }
+  .home-fab:hover, .home-fab:focus-visible { transform: scale(1.08); }
 </style>
-<link rel="stylesheet" href="../../assets/policy.css">
+<link rel="stylesheet" href="../../assets/policy.css?v=3">
 </head>
 <body>
 
