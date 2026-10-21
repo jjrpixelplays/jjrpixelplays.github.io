@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JJR Pixel Plays</title>
 <meta name="description" content="Numero Rush and Alchemy Arrays – games by JJR Pixel Plays.">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<meta property="og:title" content="jjrpixelplays">
+<meta property="og:description" content="Indie puzzle &amp; party games. Free on Android &amp; iOS.">
+<meta property="og:image" content="https://jjrpixelplays.github.io/assets/banner.webp">
 <style>
   :root { --bg:#0f1220; --card:#1a1f36; --text:#eef0ff; --muted:#9aa3c7; --accent:#7c5cff; }
   @media (prefers-color-scheme: light) {
@@ -21,13 +26,17 @@
   .card a { display:inline-block; margin-top:8px; padding:8px 16px; border-radius:8px;
             background:var(--accent); color:#fff; text-decoration:none; }
   .ad-slot { min-height:50px; margin:24px 0; text-align:center; color:var(--muted); font-size:12px; }
+  header { padding-top:0; }
+  .banner { display:block; width:100%; height:auto; border-radius:0 0 14px 14px; }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
   footer { color:var(--muted); font-size:13px; }
 </style>
 </head>
 <body>
 <header>
-  <h1>JJR Pixel Plays</h1>
-  <p class="sub">Games by jjrpixelplays</p>
+  <h1 class="sr-only">jjrpixelplays</h1>
+  <img class="banner" src="assets/banner.webp" width="2000" height="1125"
+       alt="jjrpixelplays – Indie puzzle &amp; party games. Free on Android &amp; iOS.">
 </header>
 <main>
   <div class="grid">
