@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="assets/icon.png">
 <meta property="og:title" content="jjrpixelplays">
 <meta property="og:description" content="Indie puzzle &amp; party games. Free on Android &amp; iOS.">
-<meta property="og:image" content="https://jjrpixelplays.github.io/assets/banner.webp">
+<meta property="og:image" content="https://jjrpixelplays.github.io/assets/banner.png">
 <style>
   :root { --bg:#0f1220; --card:#1a1f36; --text:#eef0ff; --muted:#9aa3c7; --accent:#7c5cff; }
   @media (prefers-color-scheme: light) {
@@ -17,7 +17,7 @@
   }
   * { box-sizing:border-box; }
   body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:var(--text); }
-  header, main, footer { max-width:880px; margin:0 auto; padding:24px 16px; }
+  main, footer { max-width:880px; margin:0 auto; padding:24px 16px; }
   h1 { margin:0 0 4px; }
   p.sub { color:var(--muted); margin:0; }
   .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
@@ -27,8 +27,8 @@
   .card a { display:inline-block; margin-top:8px; padding:8px 16px; border-radius:8px;
             background:var(--accent); color:#fff; text-decoration:none; }
   .ad-slot { min-height:50px; margin:24px 0; text-align:center; color:var(--muted); font-size:12px; }
-  header { padding-top:0; }
-  .banner { display:block; width:100%; height:auto; border-radius:0 0 14px 14px; }
+  header { position:sticky; top:0; z-index:10; background:#f1f6ef; box-shadow:0 2px 10px rgba(0,0,0,.12); }
+  .banner { display:block; width:100%; height:auto; max-height:150px; object-fit:contain; }
   .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
   footer { color:var(--muted); font-size:13px; }
 </style>
@@ -36,7 +36,7 @@
 <body>
 <header>
   <h1 class="sr-only">jjrpixelplays</h1>
-  <img class="banner" src="assets/banner.webp" width="2000" height="1125"
+  <img class="banner" src="assets/banner.png" width="1573" height="424"
        alt="jjrpixelplays – Indie puzzle &amp; party games. Free on Android &amp; iOS.">
 </header>
 <main>
