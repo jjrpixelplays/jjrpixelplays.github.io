@@ -18,21 +18,28 @@
   main, footer { max-width:880px; margin:0 auto; padding:24px 16px; }
   h1 { margin:0 0 4px; }
   p.sub { color:var(--muted); margin:0; }
-  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
-  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:0 4px 14px -8px rgba(31,111,85,.35); }
-  .game-icon { display:block; width:72px; height:72px; border-radius:16px; margin-bottom:12px; }
-  .card h2 { margin-top:0; color:var(--text); }
-  .card a { display:inline-block; margin-top:8px; padding:8px 16px; border-radius:8px;
-            background:var(--accent); color:#fff; text-decoration:none; }
-  .card a:hover, .card a:focus-visible { background:var(--accent-dark); }
-  .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
-  .links a { margin-top:0; }
-  .qrs { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start; margin:8px 0 4px; }
-  .card a.qr { display:flex; flex-direction:column; align-items:center; gap:6px; margin:0; padding:8px; background:#fff; color:var(--text); border:1px solid var(--border); border-radius:12px; font-size:13px; font-weight:600; }
-  .card a.qr:hover, .card a.qr:focus-visible { background:#f1f6ef; }
-  .qr img { display:block; width:120px; height:120px; }
-  .qrs .soon { margin-top:0; align-self:center; }
-  .card .soon { display:inline-block; margin-top:8px; padding:8px 16px; border-radius:8px; background:#e6efe3; color:var(--muted); border:1px dashed #b9cbb5; }
+  .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); }
+  .card { min-width:0; position:relative; overflow:hidden; background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px 24px 20px;
+          box-shadow:0 10px 30px -16px rgba(31,111,85,.45); }
+  .card::before { content:""; position:absolute; left:0; right:0; top:0; height:6px; background:var(--tint); }
+  #numero-rush { --tint:#f7811e; }
+  #alchemy-arrays { --tint:#2edea2; }
+  .card-head { display:flex; align-items:center; gap:16px; }
+  .game-icon { display:block; flex:none; width:72px; height:72px; border-radius:18px; box-shadow:0 6px 14px -6px rgba(0,0,0,.4); }
+  .card h2 { margin:0 0 4px; font-size:24px; line-height:1.15; color:var(--text); }
+  .card .tag { margin:0; color:var(--muted); font-size:15px; line-height:1.4; }
+  .get { margin:22px 0 10px; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+  .qrs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+  .qr, .soon { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:12px 10px 10px; border-radius:16px; text-decoration:none; text-align:center; }
+  .qr { background:#fff; color:var(--text); border:1px solid var(--border); transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  .qr:hover, .qr:focus-visible { transform:translateY(-3px); border-color:var(--tint); box-shadow:0 10px 20px -10px rgba(0,0,0,.35); }
+  .qr img { display:block; width:100%; max-width:132px; height:auto; aspect-ratio:1; }
+  .qr b, .soon b { display:block; font-size:14px; }
+  .qr small, .soon small { display:block; font-size:12px; color:var(--muted); font-weight:400; }
+  .soon { background:#e6efe3; color:var(--muted); border:1px dashed #b9cbb5; }
+  .links { display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:20px; padding-top:14px; border-top:1px solid var(--border); font-size:14px; }
+  .links a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .links a:hover, .links a:focus-visible { color:var(--accent-dark); text-decoration:underline; text-underline-offset:3px; }
   .ad-slot { min-height:50px; margin:24px 0; text-align:center; color:var(--muted); font-size:12px; }
   header { position:sticky; top:0; z-index:10; background:#f1f6ef; box-shadow:0 2px 10px rgba(0,0,0,.12); }
   .banner { display:block; width:100%; height:auto; max-height:150px; object-fit:contain; }
@@ -49,12 +56,17 @@
 <main>
   <div class="grid">
     <section class="card" id="numero-rush">
-      <img class="game-icon" src="numero-rush/icon.png" width="72" height="72" alt="Numero Rush icon">
-      <h2>Numero Rush</h2>
-      <p>A fast-paced number puzzle. Race the clock and chain your numbers.</p>
+      <div class="card-head">
+        <img class="game-icon" src="numero-rush/icon.png" width="72" height="72" alt="Numero Rush icon">
+        <div>
+          <h2>Numero Rush</h2>
+          <p class="tag">A fast-paced number puzzle. Race the clock and chain your numbers.</p>
+        </div>
+      </div>
+      <p class="get">Scan or tap to play</p>
       <div class="qrs">
-        <a class="qr" href="https://apps.apple.com/in/app/numero-rush/id6827196443" target="_blank" rel="noopener"><img src="assets/qr/numero-rush-ios.png" width="120" height="120" alt="QR code for Numero Rush on the App Store"><span>App Store</span></a>
-        <a class="qr" href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.numeroRush&amp;hl=en_IN" target="_blank" rel="noopener"><img src="assets/qr/numero-rush-android.png" width="120" height="120" alt="QR code for Numero Rush on Google Play"><span>Google Play</span></a>
+        <a class="qr" href="https://apps.apple.com/in/app/numero-rush/id6827196443" target="_blank" rel="noopener"><img src="assets/qr/numero-rush-ios.png" width="132" height="132" alt="QR code for Numero Rush on App Store"><span><b>App Store</b><small>iOS</small></span></a>
+        <a class="qr" href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.numeroRush&amp;hl=en_IN" target="_blank" rel="noopener"><img src="assets/qr/numero-rush-android.png" width="132" height="132" alt="QR code for Numero Rush on Google Play"><span><b>Google Play</b><small>Android</small></span></a>
       </div>
       <div class="links">
         <a href="numero-rush/privacy/">Privacy Policy</a>
@@ -62,12 +74,17 @@
       </div>
     </section>
     <section class="card" id="alchemy-arrays">
-      <img class="game-icon" src="alchemy-arrays/icon.png" width="72" height="72" alt="Alchemy Arrays icon">
-      <h2>Alchemy Arrays</h2>
-      <p>Combine elements in clever arrays to unlock new reactions.</p>
+      <div class="card-head">
+        <img class="game-icon" src="alchemy-arrays/icon.png" width="72" height="72" alt="Alchemy Arrays icon">
+        <div>
+          <h2>Alchemy Arrays</h2>
+          <p class="tag">Combine elements in clever arrays to unlock new reactions.</p>
+        </div>
+      </div>
+      <p class="get">Scan or tap to play</p>
       <div class="qrs">
-        <a class="qr" href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.alchemyArrays&amp;hl=en_IN" target="_blank" rel="noopener"><img src="assets/qr/alchemy-arrays-android.png" width="120" height="120" alt="QR code for Alchemy Arrays on Google Play"><span>Google Play</span></a>
-        <span class="soon">App Store: coming soon</span>
+        <a class="qr" href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.alchemyArrays&amp;hl=en_IN" target="_blank" rel="noopener"><img src="assets/qr/alchemy-arrays-android.png" width="132" height="132" alt="QR code for Alchemy Arrays on Google Play"><span><b>Google Play</b><small>Android</small></span></a>
+        <div class="soon"><span><b>App Store</b><small>iOS · Coming soon</small></span></div>
       </div>
       <div class="links">
         <a href="alchemy-arrays/privacy/">Privacy Policy</a>
