@@ -25,6 +25,11 @@
   .card a { display:inline-block; margin-top:8px; padding:8px 16px; border-radius:8px;
             background:var(--accent); color:#fff; text-decoration:none; }
   .card a:hover, .card a:focus-visible { background:var(--accent-dark); }
+  .qrs { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start; margin:8px 0 4px; }
+  .card a.qr { display:flex; flex-direction:column; align-items:center; gap:6px; margin:0; padding:8px; background:#fff; color:var(--text); border:1px solid var(--border); border-radius:12px; font-size:13px; font-weight:600; }
+  .card a.qr:hover, .card a.qr:focus-visible { background:#f1f6ef; }
+  .qr img { display:block; width:120px; height:120px; }
+  .qrs .soon { margin-top:0; align-self:center; }
   .card .soon { display:inline-block; margin-top:8px; padding:8px 16px; border-radius:8px; background:#e6efe3; color:var(--muted); border:1px dashed #b9cbb5; }
   .ad-slot { min-height:50px; margin:24px 0; text-align:center; color:var(--muted); font-size:12px; }
   header { position:sticky; top:0; z-index:10; background:#f1f6ef; box-shadow:0 2px 10px rgba(0,0,0,.12); }
@@ -45,8 +50,10 @@
       <img class="game-icon" src="numero-rush/icon.png" width="72" height="72" alt="Numero Rush icon">
       <h2>Numero Rush</h2>
       <p>A fast-paced number puzzle. Race the clock and chain your numbers.</p>
-      <a href="https://apps.apple.com/in/app/numero-rush/id6827196443" target="_blank" rel="noopener">App Store</a>
-      <br><a href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.numeroRush&amp;hl=en_IN" target="_blank" rel="noopener">Google Play</a>
+      <div class="qrs">
+        <a class="qr" href="https://apps.apple.com/in/app/numero-rush/id6827196443" target="_blank" rel="noopener"><img src="assets/qr/numero-rush-ios.png" width="120" height="120" alt="QR code for Numero Rush on the App Store"><span>App Store</span></a>
+        <a class="qr" href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.numeroRush&amp;hl=en_IN" target="_blank" rel="noopener"><img src="assets/qr/numero-rush-android.png" width="120" height="120" alt="QR code for Numero Rush on Google Play"><span>Google Play</span></a>
+      </div>
       <br><a href="numero-rush/privacy/">Privacy Policy</a>
       <br><a href="numero-rush/terms/">Terms of Use</a>
     </section>
@@ -54,8 +61,10 @@
       <img class="game-icon" src="alchemy-arrays/icon.png" width="72" height="72" alt="Alchemy Arrays icon">
       <h2>Alchemy Arrays</h2>
       <p>Combine elements in clever arrays to unlock new reactions.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.alchemyArrays&amp;hl=en_IN" target="_blank" rel="noopener">Google Play</a>
-      <br><span class="soon">App Store: coming soon</span>
+      <div class="qrs">
+        <a class="qr" href="https://play.google.com/store/apps/details?id=com.jjrpixelplays.alchemyArrays&amp;hl=en_IN" target="_blank" rel="noopener"><img src="assets/qr/alchemy-arrays-android.png" width="120" height="120" alt="QR code for Alchemy Arrays on Google Play"><span>Google Play</span></a>
+        <span class="soon">App Store: coming soon</span>
+      </div>
       <br><a href="alchemy-arrays/privacy/">Privacy Policy</a>
       <br><a href="alchemy-arrays/terms/">Terms of Use</a>
     </section>
